@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.gawekar</groupId>
+    <artifactId>spring-boot-custom-starter</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+        <java.version>11</java.version>
+        <spring-boot.version>2.0.8.RELEASE</spring-boot.version>
+    </properties>
+
+    <modules>
+        <module>calculator-library</module>
+        <module>calculator-spring-boot-autoconfigure</module>
+        <module>calculator-spring-boot-starter</module>
+        <module>calculator-spring-boot-sample-app</module>
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+
+
+</project>
